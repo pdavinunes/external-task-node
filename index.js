@@ -22,6 +22,7 @@ client.subscribe('save_user', async function({ task, taskService }) {
   await taskService.complete(task);
 });
 
+// Se inscrive no tópico: 'send_email'
 client.subscribe('send_email', async function({ task, taskService }) { 
 
     const email = task.variables.get('email');
